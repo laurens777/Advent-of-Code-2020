@@ -3,8 +3,7 @@ def main():
     s1 = 0
     with open("input.txt") as input:
         for line in input:
-            fullLine = line.strip("\n")*1000
-            if fullLine[s1] == "#":
+            if line[s1 % len(line.strip('\n'))] == "#":
                 tree1 += 1
             s1 += 3
         print(tree1)
